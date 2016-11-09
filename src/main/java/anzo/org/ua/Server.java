@@ -38,7 +38,7 @@ public class Server implements Runnable {
             String line = null;
             while (true) {
                 line = in.readUTF();
-                System.out.println("Server sent");
+                System.out.println("Server sent" + socket.getLocalSocketAddress());
                 out.writeUTF(line);
                 out.flush();
             }

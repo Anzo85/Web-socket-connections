@@ -3,7 +3,7 @@ package anzo.org.ua;
 import java.net.*;
 import java.io.*;
 
-public class Client {
+public class Client2 {
     public static void main(String[] args) throws Exception {
         int serverPort = 9899;
         String address = "127.0.0.1";
@@ -24,15 +24,15 @@ public class Client {
 
         while (true) {
             Thread.sleep(2000);
+
             line = args[0];
 
             out.writeUTF(line);
             out.flush();
             line = in.readUTF();
-            System.out.println(" Message: " + line);
+            System.out.println(" Message : " + line);
             System.out.println();
         }
     }
 
 }
-
