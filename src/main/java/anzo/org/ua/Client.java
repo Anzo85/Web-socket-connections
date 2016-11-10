@@ -4,9 +4,9 @@ import java.net.*;
 import java.io.*;
 
 public class Client {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] arg) throws Exception {
         int serverPort = 9899;
-        String address = "127.0.0.1";
+        String address = arg[0];
 
 
         InetAddress ipAddress = InetAddress.getByName(address);
@@ -24,7 +24,7 @@ public class Client {
 
         while (true) {
             Thread.sleep(2000);
-            line = args[0];
+            line = arg[1];
 
             out.writeUTF(line);
             out.flush();
